@@ -1,134 +1,178 @@
+:root {
+  /* Dark Blue */
+  --dark-blue-100: #609ed4;
+  --dark-blue-200: #356ea9;
+  --dark-blue-300: #0a3871;
+  --dark-blue-400: #072b61;
+  --dark-blue-500: #052051;
+
+  /* Light Blue */
+  --light-blue-100: #f3f5fc;
+  --light-blue-200: #eff1fa;
+  --light-blue-300: #e9ecf8;
+  --light-blue-400: #aab2d5;
+  --light-blue-500: #757fb2;
+
+  /* Gray */
+  --gray-100: #ced4da;
+  --gray-200: #adb5bd;
+  --gray-300: #868e96;
+  --gray-400: #495057;
+  --gray-500: #343a40;
+
+  /* White */
+  --white: #ffffff;
+}
+
 * {
   font-family: "Inter";
   font-weight: 400;
-  font-size: 32px;
+  font-size: 16px;
   line-height: 150%;
-  overflow-y: hidden;
+  overflow: hidden;
+  border: none;
 }
 
 body {
-  background-color: #f3f5fc;
+  background: var(--light-blue-100);
 }
 
-.logo {
-  padding-top: 10px;
-  margin-left: 10px;
-  width: 10%;
+.cabecera-logo {
+  margin-top: 2.5rem;
+  margin-left: 2.5rem;
 }
 
-main {
+.main {
   display: flex;
-  margin-bottom: 10px;
-  margin-left: 180px;
-  gap: 80px;
+  gap: 5rem;
+  height: calc(100vh - 7.375rem);
+}
+
+.section-left {
+  margin-left: 12.5rem;
+  margin-bottom: 2rem;
 }
 
 .text-area {
-  height: 400px;
+  height: 25rem;
+  margin-top: 1.875rem;
   border: none;
-  color: #0a3871;
-  margin-top: 30px;
-  padding: 2px;
-  text-transform: lowercase;
-  background-color: transparent;
+  font-size: 2rem;
+  color: var(--dark-blue-300);
   resize: none;
-}
-::placeholder {
-  color: #0a3871;
-}
-.text-area:focus {
-  outline: none;
+  background-color: transparent;
 }
 
-.mensaje {
-  height: 630px;
-  background: white;
-  background-image: url("/img/Muneco.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border: none;
-  color: #0a3871;
-  width: 100%;
-  resize: none;
+.text-area::placeholder {
+  color: var(--dark-blue-300);
 }
-.mensaje:focus {
+
+.text-area:focus {
   outline: none;
+  cursor: pointer;
 }
 
 .container-btn {
   display: flex;
-  margin-top: 18px;
+  gap: 1.5rem;
 }
 
-.btn-desencriptar {
-  background: #d8dfe8;
-  border: 1px solid #0a3871;
-  border-radius: 24px;
-  color: #0a3871;
+.btn {
+  border-radius: 1.5rem;
+  width: 20.5rem;
+  padding: 1.5rem;
   cursor: pointer;
-  height: 67px;
-  margin-left: 30px;
-  width: 328px;
 }
 
 .btn-encriptar {
-  background-color: #0a3871;
-  border: 1px solid #0a3871;
-  border-radius: 24px;
-  color: white;
-  cursor: pointer;
-  height: 67px;
-  width: 328px;
+  background-color: var(--dark-blue-300);
+  border: none;
+  color: var(--white);
+  text-align: center;
+}
+
+.btn-encriptar:hover {
+  background-color: var(--dark-blue-400);
+  animation-timing-function: ease-out;
+  animation-duration: 300ms;
+}
+
+.btn-desencriptar {
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  border: 1px solid var(--dark-blue-300);
+  color: var(--dark-blue-300);
+  text-align: center;
+}
+
+.btn-desencriptar:hover {
+  background-color: var(--light-blue-200);
+  animation-timing-function: ease-out;
+  animation-duration: 300ms;
 }
 
 .btn-copiar {
-  border: 1px solid #0a3871;
-  border-radius: 24px;
-  color: #0a3871;
-  cursor: pointer;
-  height: 67px;
-  width: 336px;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  border: 1px solid var(--dark-blue-300);
+  color: var(--dark-blue-300);
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+
+.btn-copiar:hover {
+  background-color: var(--light-blue-200);
+  animation-timing-function: ease-out;
+  animation-duration: 300ms;
 }
 
 .informacion {
-  color: #495057;
-  font-size: 18px;
-}
-
-.ingrese-texto {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding-bottom: 32px;
-  text-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-400);
+  font-size: 0.75rem;
+  margin: 1rem 0;
 }
 
 .section-right {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  border-radius: 24px;
-  background-color: white;
-  overflow: hidden;
+  width: 25rem;
+  border-radius: 2rem;
+  background: var(--white);
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
   box-sizing: border-box;
-  padding: 32px;
 }
 
-.section-left {
+.ingrese-texto {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  gap: 1rem;
 }
 
-.cabecera-logo {
-  margin-top: 40px;
-  margin-left: 40px;
+.mensaje {
+  width: 100%;
+  height: 46rem;
+  border: none;
+  background: white;
+  background-image: url("/img/Muneco.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: var(--dark-blue-300);
+  outline: none;
+  resize: none;
+  font-size: 2rem;
 }
 
 .aviso {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .sugerencia {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
