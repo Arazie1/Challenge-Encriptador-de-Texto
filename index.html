@@ -11,51 +11,54 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap"
       rel="stylesheet" />
-    <link rel="shortcut icon" href="./img/FavLogo.svg" type="image/x-icon" />
-    <title>Encriptador</title>
+    <link rel="shortcut icon" href="./img/Logo.svg" type="image/x-icon" />
+    <title>Desafío Encriptador</title>
   </head>
   <body>
-    <header class="cabecera">
-      <img class="cabecera-logo" src="./img/Logo.svg" alt="Logo de Alura" />
+    <header class="headline">
+      <img class="headline__img" src="./img/Logo.svg" alt="Logo" />
     </header>
-    <main class="main">
-      <section class="section-left">
+    <main class="principal">
+      <section class="left-container">
         <textarea
-          class="text-area"
-          placeholder="Ingrese el texto aquí"
+          class="left-container__text"
+          name=""
+          id=""
           cols="30"
-          rows="10"></textarea>
-        <div class="informacion">
-          <img class="informacion__img" src="./img/Alerta.svg" alt="Alerta" />
-          <span class="informacion__texto">
-            Solo letras minúsculas y sin acentos
-          </span>
+          placeholder="Ingrese el texto aquí"></textarea>
+        <div class="alert">
+          <img class="alert__img" src="./img/Alert.svg" alt="Alerta" />
+          <span class="alert__text">Solo letras minúculas y sin acentos</span>
         </div>
-        <div class="container-btn">
-          <button class="btn-encriptar btn" onclick="btnEncriptar()">
-            Encriptar
-          </button>
-          <button class="btn-desencriptar btn" onclick="btnDesencriptar()">
-            Desencriptar
-          </button>
+        <div class="btn">
+          <button class="btn__encrypt">Encriptar</button>
+          <button class="btn__decrypt">Desencriptar</button>
         </div>
       </section>
-      <section class="section-right">
-        <textarea class="mensaje" cols="20" rows="10" readonly></textarea>
-        <div class="ingrese-texto">
-          <p class="aviso">Ningún mensaje fue encontrado</p>
-          <p class="sugerencia">
-            Ingresa el texto que desees encriptar o desencriptar.
-          </p>
-        </div>
-        <div>
-          <button class="btn-copiar btn" onclick="copiar()">Copiar</button>
-        </div>
+      <section class="right-container">
+        <img
+          class="right-container__img initial-view"
+          src="./img/Muneco.png"
+          alt="Muñeco" />
+        <p class="right-container__warn initial-view">
+          Ningún mensaje fue encontrado
+        </p>
+        <p class="right-container__message initial-view">
+          Ingresa el texto que desees encriptar o desencriptar.
+        </p>
+        <p class="middle-view">Escribiendo...</p>
+        <textarea
+          class="right-container__text final-view"
+          name=""
+          id=""
+          cols="20"
+          readonly></textarea>
+        <button class="right-container__copy final-view">Copiar</button>
       </section>
     </main>
-    <footer>
-      <p>Aquí va el footer</p>
+    <footer class="footer">
+      <p class="footer__text">Aquí va el Footer</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
