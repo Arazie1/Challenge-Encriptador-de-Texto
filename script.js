@@ -38,8 +38,9 @@ btnDecrypt.addEventListener("click", () => {
 });
 
 btnCopy.addEventListener("click", () => {
-  const copyText = textRight.value;
-  navigator.clipboard.writeText(copyText);
+  textRight.select();
+  navigator.clipboard.writeText(textRight.value);
+  textRight.value = "";
   alert("El texto ha sido copiado");
 });
 
